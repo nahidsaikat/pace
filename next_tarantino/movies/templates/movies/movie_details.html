@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Name: {{ movie.name }}</h1>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+    <p><strong>Director:</strong> {{ movie.director }}</p>
+    <p><strong>Writer:</strong> {{ movie.writer }}</p>
+    <p><strong>Released:</strong> {{ movie.released }}</p>
+    <p><strong>Actors:</strong> {{ movie.actors }}</p>
+    <p><strong>Country:</strong> {{ movie.country }}</p>
+    <p><strong>Awards:</strong> {{ movie.awards }}</p>
+    <p><strong>Box Office:</strong> {{ movie.mox_office }}</p>
+    <p><strong>IMDB Rating:</strong> {{ movie.imdb_rating }}</p>
+    <p><strong>Language:</strong> {{ movie.language }}</p>
+    <p><strong>Runtime:</strong> {{ movie.runtime }}</p>
+    <p><strong>Favorite:</strong> {{ movie.my_favorite }}</p>
+
+    <a href="{% url 'movie-favorite' movie.id %}">Make it favorite</a>
+{% endblock %}
